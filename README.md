@@ -1,1 +1,2 @@
-# DetectIranianBankJS
+# Detect Iranian Banks Javascript
+
