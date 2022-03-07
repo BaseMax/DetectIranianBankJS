@@ -1,5 +1,7 @@
 # Detect Iranian Banks Javascript
 
+List of all Iranian banks with prefix Code number for detecting name of bank from Card Number, Powered by **JavaScript**.
+
 ## List of supported banks
 
 - Ansar (بانک انصار)
