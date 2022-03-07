@@ -227,17 +227,11 @@ const banks = [{
 const detect_bank = (card_number) => {
     const onlyNum = str => str.replace(/[^.\d]/g, '');
     card_number = onlyNum(String(card_number));
+    if (card_number.length < 6) return undefined;
+    card_number_prefix = parseInt(card_number.substr(0, 6));
 
-    if (card_number.length < 6)
-        return undefined;
-
-    card_number_prefix = card_number.substr(0, 6);
-    // TODO: use .filter() JS
-    for (const bank of banks) {
-        if (card_number_prefix == bank.card_no)
-            return bank;
-    }
-    return undefined;
+    const bank = banks.filter(b => b.card_no === card_number_prefix);
+    return bank.length === 0 ? undefined : bank;
 };
 
 console.log(detect_bank("63934610"));
