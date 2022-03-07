@@ -231,7 +231,7 @@ const detect_bank = (card_number) => {
     card_number_prefix = parseInt(card_number.substr(0, 6));
 
     const bank = banks.filter(b => b.card_no === card_number_prefix);
-    return bank.length === 0 ? undefined : bank;
+    return bank.length === 0 ? undefined : bank[0];
 };
 
 console.log(detect_bank("63934610"));
